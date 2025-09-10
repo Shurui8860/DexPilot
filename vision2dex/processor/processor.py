@@ -320,8 +320,7 @@ class Processor:
         print(f"[DONE] processed {count} subject(s) into '{out_subdir}'")
 
 
-proc = Processor().from_yaml("vision2dex/processor/config.yaml")
-proc.print_summary()
-proc.process_all_subjects("right", order="ho3d", out_subdir="dex_meta")
-
-
+if name == "__main__":
+    proc = Processor().from_yaml("vision2dex/processor/config.yaml")
+    proc.print_summary()
+    proc.process_all_subjects("right", order="ho3d", out_subdir="dex_meta")
