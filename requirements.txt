@@ -1,0 +1,17 @@
+numpy<=1.24
+anytree
+pyyaml
+lxml
+pin>=2.7.0
+pytransform3d
+trimesh
+nlopt
+torch
+
+# for test
+opencv-python
+pyrealsense2
+mediapipe
+mujoco
+tyro
+loguru
