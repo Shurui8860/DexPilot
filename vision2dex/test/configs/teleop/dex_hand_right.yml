@@ -1,0 +1,16 @@
+retargeting:
+  type: vector
+  urdf_path: dex_hand/dex_hand_right.urdf
+  wrist_link_name: "wrist_link"
+
+  # Target refers to the retargeting target, which is the robot hand
+  target_joint_names: [ 'r_f_joint1_1', 'r_f_joint1_2', 'r_f_joint1_3', 'r_f_joint2_1', 'r_f_joint2_2', 'r_f_joint2_3', 'r_f_joint2_4', 'r_f_joint3_1', 'r_f_joint3_2', 'r_f_joint3_3', 'r_f_joint3_4', 'r_f_joint4_1', 'r_f_joint4_2', 'r_f_joint4_3', 'r_f_joint4_4', 'r_f_joint5_1', 'r_f_joint5_2', 'r_f_joint5_3', 'r_f_joint5_4' ]
+  #[ 'r_f_joint1_1', 'r_f_joint1_2', 'r_f_joint1_3', 'r_f_joint2_2', 'r_f_joint2_3', 'r_f_joint2_4', 'r_f_joint3_2', 'r_f_joint3_3', 'r_f_joint3_4', 'r_f_joint4_2', 'r_f_joint4_3', 'r_f_joint4_4', 'r_f_joint5_2', 'r_f_joint5_3', 'r_f_joint5_4' ]
+  target_origin_link_names: [ "wrist_link", "wrist_link", "wrist_link", "wrist_link", "wrist_link" ]
+  target_task_link_names: [ "r_f_link1_3_2",  "r_f_link2_3_2", "r_f_link3_3_2", "r_f_link4_3_2", "r_f_link5_3_2" ]
+  scaling_factor: 2.0
+
+  target_link_human_indices: [ [ 0, 0, 0, 0, 0 ], [ 4, 8, 12, 16, 20 ] ]
+
+  # A smaller alpha means stronger filtering, i.e. more smooth but also larger latency
+  low_pass_alpha: 0.2

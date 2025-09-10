@@ -1,0 +1,28 @@
+# Robot description
+robot:
+  urdf_path: "dexrobot_urdf/urdf/dexhand021_right_flyingbase.urdf"
+  wrist_link_name: "right_hand_base"   # or "r_p_link0" if that's your wrist link
+
+  # Fingertip link names (5)
+  finger_tip_link_names:
+    - "r_f_link1_tip"
+    - "r_f_link2_tip"
+    - "r_f_link3_tip"
+    - "r_f_link4_tip"
+    - "r_f_link5_tip"
+
+optimizer:
+  huber_delta: 0.03
+  norm_delta: 0.004
+  project_dist: 0.03
+  escape_dist: 0.05
+  eta1: 0.0001
+  eta2: 0.03
+  scale: 2.0
+
+filter:
+  dt: 0.0666666666666   # 1/15
+  fc_hz: 6.0
+
+warm_start: True
+

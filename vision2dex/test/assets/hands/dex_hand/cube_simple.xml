@@ -1,0 +1,23 @@
+<mujoco>
+    <worldbody>
+        <!-- 第一个方块 -->
+        <body name="box1" pos="-0.01 -0.27 0.17">
+            <geom type="box" size="0.01 0.02 0.02" rgba="1 0 0 1"/>
+            <inertial pos="0 0 0" mass="0.05" diaginertia="0.0003125 0.0003125 0.0003125"/>
+            <!-- 第二个方块 -->
+            <body name="box2" pos="0.02 0.0 0">
+                <joint name="rotate_joint" type="hinge" axis="1 0 0" pos="0.01 0 0" damping="0.0"/>
+                <geom type="box" size="0.01 0.02 0.02" rgba="0 0 1 1"/>
+                <inertial pos="0 0 0" mass="0.05" diaginertia="0.0003125 0.0003125 0.0003125"/>
+            </body>
+        </body>
+    </worldbody>
+
+    <contact>
+        <exclude body1="box1" body2="box2"/>
+    </contact>
+
+    <!-- <actuator>
+        <motor joint="rotate_joint" ctrllimited="true" ctrlrange="-1 1"/>
+    </actuator> -->
+</mujoco>
