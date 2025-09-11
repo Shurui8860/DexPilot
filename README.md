@@ -73,6 +73,13 @@ The **retargeted `.pkl` files** in `dex_meta/` contain:
 
 ```python
 {
+  "dummy_x_translation_joint": float,
+  "dummy_y_translation_joint": float,
+  "dummy_z_translation_joint": float,
+  "dummy_x_rotation_joint": float,
+  "dummy_y_rotation_joint": float,
+  "dummy_z_rotation_joint": float,
+
   "r_f_joint1_1": float,
   "r_f_joint1_2": float,
   ...
